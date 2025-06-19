@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { Switch } from "@headlessui/react";
-import { useContext } from "react";
-import { ColorScheme, LayoutContext } from "../providers/LayoutProvider";
-import { MoonIcon, SunIcon } from "@heroicons/react/16/solid";
-import Link from "next/link";
+import { Switch } from '@headlessui/react';
+import { useContext } from 'react';
+import { ColorScheme, LayoutContext } from '../../providers/LayoutProvider';
+import { MoonIcon, SunIcon } from '@heroicons/react/16/solid';
+import Link from 'next/link';
 
 export const Header = () => {
   const { colorScheme, setColorScheme } = useContext(LayoutContext);

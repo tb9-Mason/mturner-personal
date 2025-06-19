@@ -1,22 +1,19 @@
-"use client";
-import { useContext } from "react";
+'use client';
+import { useContext } from 'react';
 
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono } from 'next/font/google';
 
-import {
-  LayoutContext,
-  LayoutProvider,
-} from "./common/providers/LayoutProvider";
-import { Header } from "./common/components/Header";
+import { LayoutContext, LayoutProvider } from './common/providers/LayoutProvider';
+import { Header } from './common/components';
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+  variable: '--font-geist-sans',
+  subsets: ['latin'],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: '--font-geist-mono',
+  subsets: ['latin'],
 });
 
 export function RootLayout({
@@ -27,9 +24,7 @@ export function RootLayout({
   const { colorScheme } = useContext(LayoutContext);
   return (
     <html lang="en" className={colorScheme}>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Header />
         <LayoutProvider>{children}</LayoutProvider>
       </body>
