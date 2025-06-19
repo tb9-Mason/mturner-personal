@@ -9,7 +9,7 @@ import Link from 'next/link';
 export const Header = () => {
   const { colorScheme, setColorScheme } = useContext(LayoutContext);
   return (
-    <header className="max-w-4xl mx-auto flex items-center justify-around my-4">
+    <header className="max-w-4xl mx-auto flex w-full items-center justify-around my-4">
       <Link href="/">home</Link>
       <Link href="about">about</Link>
       <Link href="examples">examples</Link>
