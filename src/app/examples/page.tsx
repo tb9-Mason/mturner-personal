@@ -1,4 +1,4 @@
-import { Heading, PageLayout } from '../common/components';
+import { Heading, PageLayout } from '../_common/components';
 
 export default function Examples() {
   return (

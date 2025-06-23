@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 import './globals.css';
-import { ColorScheme, LayoutProvider } from './common/providers/LayoutProvider';
+import { ColorScheme, LayoutProvider } from './_common/providers/LayoutProvider';
 import { cookies } from 'next/headers';
 import { RootLayout } from './rootlayout';
 

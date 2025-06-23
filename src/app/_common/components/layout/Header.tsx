@@ -23,6 +23,7 @@ export const Header = () => {
           <span className="size-4 translate-x-1 rounded-full bg-white transition group-data-checked:translate-x-6">
             <MoonIcon className="text-slate-900 hidden dark:block" />
             <SunIcon className="text-slate-900 hidden not-dark:block" />
+            <span className="sr-only">dark mode toggle</span>
           </span>
         </Switch>
         light
