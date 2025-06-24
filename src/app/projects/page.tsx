@@ -12,8 +12,8 @@ export default function Examples() {
         Here is a list of a few notable projects I have worked on. There are a few that I can&apos;t link out to for
         various reasons, but I&apos;ve done my best to provide as much context as possible.
       </p>
-      {projects.map((p) => {
-        return <ProjectCard key={p.id} project={p} />;
+      {projects.map((p, index) => {
+        return <ProjectCard key={p.id} project={p} index={index} />;
       })}
     </PageLayout>
   );

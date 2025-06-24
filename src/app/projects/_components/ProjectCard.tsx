@@ -4,9 +4,10 @@ import Image from 'next/image';
 
 interface ProjectCardProps {
   project: Project;
+  index: number;
 }
 
-export const ProjectCard = ({ project }: ProjectCardProps) => {
+export const ProjectCard = ({ project, index }: ProjectCardProps) => {
   return (
     <div className="w-full card">
       <Heading tag="h2" className="mb-1">
@@ -22,7 +23,14 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
       <hr className="border w-full my-2" />
       {!!project.imagePath && (
         <div className="relative max-w-full aspect-video">
-          <Image src={project.imagePath} fill={true} alt={project.name} objectFit="contain" />
+          <Image
+            src={project.imagePath}
+            fill
+            alt={project.name}
+            className="object-cover"
+            sizes="700px"
+            priority={index === 0}
+          />
         </div>
       )}
       {project.description}
