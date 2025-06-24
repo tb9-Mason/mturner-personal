@@ -23,14 +23,14 @@ export const Header = () => {
 
   return (
     <header className="max-w-4xl mx-auto w-full py-4 px-6">
-      <button className="block sm:hidden size-6" onClick={handleMobileToggle}>
+      <button className="block sm:hidden size-6" onClick={handleMobileToggle} aria-label="Toggle Mobile Menu">
         <Bars3Icon />
       </button>
       <ul
         className={`absolute z-10 shadow-2xl dark:shadow-dark bg-[var(--color-background)] border-b gap-4 p-4 top-0 left-0 right-0 flex-col items-center sm:flex sm:flex-row sm:justify-around sm:p-0 sm:static sm:border-0 sm:shadow-none sm:dark:shadow-none ${isOpen ? 'flex' : 'hidden'}`}
       >
         <li className={`sm:hidden absolute top-4 left-6 size-6 ${isOpen ? 'block' : 'hidden'}`}>
-          <button className="size-6" onClick={handleMobileToggle}>
+          <button className="size-6" onClick={handleMobileToggle} aria-label="Toggle Mobile Menu">
             <XMarkIcon />
           </button>
         </li>
@@ -54,7 +54,15 @@ export const Header = () => {
               <span className="size-4 translate-x-1 rounded-full bg-white transition group-data-checked:translate-x-6">
                 <MoonIcon className="text-slate-900 hidden dark:block" />
                 <SunIcon className="text-slate-900 hidden not-dark:block" />
-                <span className="sr-only">dark mode toggle</span>
+                <span
+                  id="toggle-descriptor"
+                  // Accessibility tools will show this as being low contrast due to the parent `bg-gray-200` even though it is hidden
+                  // Give it the theme background and foreground colors to prevent false positives
+                  className="sr-only bg-[var(--color-background)] text-[var(--color-foreground)]"
+                  aria-hidden="true"
+                >
+                  dark mode toggle
+                </span>
               </span>
             </Switch>
             light
