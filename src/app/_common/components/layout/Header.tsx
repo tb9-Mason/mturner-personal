@@ -47,6 +47,7 @@ export const Header = () => {
           <div className="flex items-center gap-2">
             dark
             <Switch
+              aria-label="dark mode toggle"
               checked={colorScheme === ColorScheme.LIGHT}
               className="group inline-flex h-6 w-11 items-center rounded-full bg-gray-200 transition data-checked:bg-slate-900"
               onChange={setColorScheme}
