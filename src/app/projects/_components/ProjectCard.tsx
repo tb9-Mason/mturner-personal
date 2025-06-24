@@ -22,7 +22,7 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
       </ul>
       <hr className="border w-full my-2" />
       {!!project.imagePath && (
-        <div className="relative max-w-full aspect-video">
+        <div className="relative max-w-full aspect-video mb-2">
           <Image
             src={project.imagePath}
             fill

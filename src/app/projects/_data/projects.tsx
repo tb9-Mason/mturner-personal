@@ -12,8 +12,8 @@ export const projects: Project[] = [
     description: (
       <DescriptionContainer>
         <p>
-          In this engagement, I was embedded in the OM1 scrum team for over a year to help accelerate the build of an
-          application that allows healthcare providers to gain increased insights into patient cohorts.
+          In this engagement, I was embedded in Cohort Explorer scrum team for over a year to help accelerate the build
+          of an application that allows healthcare providers to gain increased insights into patient cohorts.
         </p>
         <p>As part of their team, I:</p>
         <ul className="list-disc list-inside">
@@ -268,9 +268,6 @@ export const projects: Project[] = [
       {
         name: 'Next.js',
       },
-      {
-        name: 'Tailwind',
-      },
     ],
     client: 'Alloy Digital',
     projectLinks: {
@@ -384,7 +381,7 @@ export const projects: Project[] = [
     imagePath: '/gtss-academy.png',
     technologies: [
       {
-        name: 'React (Preact)',
+        name: 'React.js (Preact)',
       },
       {
         name: 'Node/Express',
