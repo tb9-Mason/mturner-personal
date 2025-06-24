@@ -1,6 +1,6 @@
 export const NameTag = () => {
   return (
-    <div className="rounded-xl bg-red-800 border-red-800 border-4 text-center min-w-80 -rotate-2 overflow-hidden shadow-2xl dark:shadow-[0_4px_24px_rgba(0,0,0,0.4),0_0_40px_rgba(255,255,255,0.5)] hover:scale-105 transition-transform">
+    <div className="rounded-xl bg-red-800 border-red-800 border-4 text-center min-w-80 -rotate-2 overflow-hidden shadow-2xl dark:shadow-dark hover:scale-105 transition-transform">
       <div className="text-white px-4 py-2">
         <div className="text-4xl uppercase font-bold">Hello</div>
         <div className="text-xl font-bold">my name is</div>

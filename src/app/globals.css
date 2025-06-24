@@ -19,6 +19,20 @@ html.dark {
   --font-mono: var(--font-geist-mono);
 }
 
+@utility shadow-dark {
+  @apply shadow-[0_12px_25px_8px_rgba(0,0,0,0.4),0_4px_40px_rgba(255,255,255,0.5)];
+}
+
+@layer components {
+  .card {
+    @apply border-2 rounded-xl p-4 px-6 shadow-2xl dark:shadow-dark;
+  }
+
+  .chip {
+    @apply rounded-full border px-2 text-sm font-bold;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -56,4 +70,8 @@ h5 {
 
 h6 {
   @apply text-sm;
+}
+
+a {
+  @apply underline;
 }
