@@ -12,7 +12,7 @@ export const Header = () => {
     <header className="max-w-4xl mx-auto flex w-full items-center justify-around my-4">
       <Link href="/">home</Link>
       <Link href="projects">projects</Link>
-      <Link href="about">about</Link>
+      <Link href="contact">contact</Link>
       <div className="flex items-center gap-2">
         dark
         <Switch
