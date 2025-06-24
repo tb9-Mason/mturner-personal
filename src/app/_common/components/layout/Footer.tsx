@@ -1,3 +1,8 @@
 export const Footer = () => {
-  return <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center"></footer>;
+  const year = new Date().getFullYear();
+  return (
+    <footer className="max-w-4xl mx-auto w-full py-4 px-6">
+      <span className="font-bold text-sm">©{year} Mason Turner</span>
+    </footer>
+  );
 };
