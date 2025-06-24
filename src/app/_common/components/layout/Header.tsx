@@ -27,7 +27,7 @@ export const Header = () => {
         <Bars3Icon />
       </button>
       <ul
-        className={`absolute z-10 bg-[var(--color-background)] border-b gap-4 p-4 top-0 left-0 right-0 flex-col items-center sm:flex-row sm:flex sm:justify-around sm:p-0 sm:static sm:border-0 ${isOpen ? 'flex' : 'hidden'}`}
+        className={`absolute z-10 shadow-2xl dark:shadow-dark bg-[var(--color-background)] border-b gap-4 p-4 top-0 left-0 right-0 flex-col items-center sm:flex sm:flex-row sm:justify-around sm:p-0 sm:static sm:border-0 sm:shadow-none sm:dark:shadow-none ${isOpen ? 'flex' : 'hidden'}`}
       >
         <li className={`sm:hidden absolute top-4 left-6 size-6 ${isOpen ? 'block' : 'hidden'}`}>
           <button className="size-6" onClick={handleMobileToggle}>
