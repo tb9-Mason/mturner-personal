@@ -16,21 +16,13 @@ jobs:
               uses: actions/setup-node@v4
               with:
                 node-version: 20
+                cache: yarn
             
             - name: Install node modules
               run: yarn install --immutable
 
             - name: Build application
               run: yarn build
-
-            - name: Start application
-              run: yarn start
-              env:
-                NODE_ENV: production
-
-            - name: Wait for application
-              run: sleep 10s
-              shell: bash
 
             - name: Run accessibility checks
               run: yarn a11y:check
