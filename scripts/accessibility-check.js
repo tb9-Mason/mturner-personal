@@ -31,7 +31,7 @@ const checks = [
 
       if (actionResults.issues.length) {
         console.error(`Issues found on ${check.url} after actions`);
-        console.error(results.issues);
+        console.error(actionResults.issues);
         process.exitCode = 1;
       } else {
         console.log(`No issues found on ${check.url} after actions!`);
