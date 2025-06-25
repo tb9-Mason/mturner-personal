@@ -14,9 +14,6 @@ export default function About() {
       <a href="http://github.com/tb9-mason" target="_blank" rel="noreferrer">
         Mason&apos;s Github
       </a>
-      <div className="bg-white">
-        <span className="bg-white">hello world</span>
-      </div>
     </PageLayout>
   );
 }
