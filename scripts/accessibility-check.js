@@ -9,7 +9,7 @@ const checks = [
 (async () => {
   for (const check of checks) {
     console.log(`\nChecking ${check.url}`);
-    const results = await pa11y(check.url);
+    const results = await pa11y(check.url, { chromeLaunchConfig: { args: ['--no-sandbox'] } });
 
     if (results.issues.length) {
       console.error(`Issues found on ${check.url}`);
@@ -21,7 +21,10 @@ const checks = [
 
     if (check.options.actions.length) {
       console.log(`${check.url} has ${check.options.actions.length} actions, checking...`);
-      const actionResults = await pa11y(check.url, check.options);
+      const actionResults = await pa11y(check.url, {
+        chromeLaunchConfig: { args: ['--no-sandbox'] },
+        ...check.options,
+      });
 
       if (actionResults.issues.length) {
         console.error(`Issues found on ${check.url} after actions`);
