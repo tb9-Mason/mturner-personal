@@ -18,13 +18,13 @@ jobs:
                 node-version: 20
             
             - name: Install node modules
-              run: npm ci
+              run: yarn ci
 
             - name: Build application
-              run: npm run build
+              run: yarn build
 
             - name: Start application
-              run: npm run start
+              run: yarn start
               env:
                 NODE_ENV: production
 
@@ -33,4 +33,4 @@ jobs:
               shell: bash
 
             - name: Run accessibility checks
-              run: npm run a11y:check
+              run: yarn a11y:check
