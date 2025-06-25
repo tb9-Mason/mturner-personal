@@ -11,18 +11,32 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v4
-            
+              
             - name: Install Node
               uses: actions/setup-node@v4
               with:
                 node-version: 20
                 cache: yarn
-            
+                
             - name: Install node modules
               run: yarn install --immutable
+                
+            - name: Install Chrome
+              uses: actions/setup-chrome@v1
 
             - name: Build application
               run: yarn build
 
+            - name: Start application
+              run: |
+                yarn start & echo $! > .app_pid
+
+            - name: Wait for application ready
+              run: yarn wait-on http://localhost:3000
+            
             - name: Run accessibility checks
               run: yarn a11y:check
+
+            - name: Stop application
+              if: always()
+              run: kill $(cat .app_pid)
