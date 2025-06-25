@@ -11,13 +11,23 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v4
-              
+
+            - name: Cache nextjs build
+              uses: actions/cache@v4
+              with:
+                path: ${{ github.workspace }}/.next/cache
+                # Generate a new cache whenever packages or source files change.
+                key: ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx') }}
+                # If source files changed but packages didn't, rebuild from a prior cache.
+                restore-keys: |
+                    ${{ runner.os }}-nextjs-${{ hashFiles('**/yarn.lock') }}-
+
             - name: Install Node
               uses: actions/setup-node@v4
               with:
                 node-version: 20
                 cache: yarn
-                
+
             - name: Install node modules
               run: yarn install --immutable
                 
@@ -33,7 +43,7 @@ jobs:
 
             - name: Wait for application ready
               run: yarn wait-on http://localhost:3000
-            
+
             - name: Run accessibility checks
               run: yarn a11y:check
 
