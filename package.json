@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "a11y:check": "node scripts/accessibility-check.js"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.4",
@@ -27,6 +28,7 @@
     "eslint-config-next": "15.3.3",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-prettier": "^5.5.0",
+    "pa11y": "^9.0.0",
     "prettier": "^3.5.3",
     "tailwindcss": "^4",
     "typescript": "^5"
