@@ -2,5 +2,8 @@
     "eslint.format.enable": true,
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     "editor.formatOnSave": true,
-    "prettier.configPath": "./.prettierrc"
+    "prettier.configPath": "./.prettierrc",
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    }
 }
