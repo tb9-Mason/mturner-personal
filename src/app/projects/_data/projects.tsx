@@ -8,164 +8,6 @@ const DescriptionContainer = ({ children }: PropsWithChildren) => {
 export const projects: Project[] = [
   {
     id: '01',
-    name: 'OM1 Cohort Explorer',
-    description: (
-      <DescriptionContainer>
-        <p>
-          In this engagement, I was embedded in Cohort Explorer scrum team for over a year to help accelerate the build
-          of an application that allows healthcare providers to gain increased insights into patient cohorts.
-        </p>
-        <p>As part of their team, I:</p>
-        <ul className="list-disc list-inside">
-          <li>Managed application state and side effects using Redux and Redux Saga</li>
-          <li>Consumed REST APIs to build complex nested components</li>
-          <li>
-            Worked with designers, product owners, subject matter experts, and the development team to plan and build
-            workable solutions
-          </li>
-          <li>Administered both architectural and visual decisions for the product</li>
-        </ul>
-        <p>
-          These types of product engagements are often my favorites, as I am able to gain some deeper insight into a
-          single system, really consuming myself in the collaborative problem solving aspects of development.
-        </p>
-      </DescriptionContainer>
-    ),
-    type: 'enterprise',
-    imagePath: '/om1.png',
-    technologies: [
-      {
-        name: 'React.js',
-      },
-      {
-        name: 'Typescript',
-      },
-      {
-        name: 'Redux Saga',
-      },
-      {
-        name: 'MUI X',
-      },
-    ],
-    client: 'OM1, Inc.',
-    projectLinks: {
-      live: 'https://www.om1.com/',
-    },
-  },
-  {
-    id: '02',
-    name: 'Unnamed Marketing Software',
-    description: (
-      <DescriptionContainer>
-        <p>
-          In this project, I led the architecture and development of an AI enabled marketing strategy platform. Backed
-          by the client&apos;s industry expertise, my team designed and developed a full-stack application that enables
-          marketing teams of all skill levels to generate actionable multi-faceted marketing plans, as well as
-          accelerate what were previously tedious marketing tasks.
-        </p>
-        <p>Some of my responsibilities in this project included:</p>
-        <ul className="list-disc list-inside">
-          <li>Working with project managers to build a backlog and prioritize development tasks</li>
-          <li>Working with designers to ensure that the client&apos;s vision was being met and exceeded</li>
-          <li>Working with the client to gather requirements and show progress</li>
-          <li>Architecting a Node/Express backend and React frontend MVP</li>
-          <li>Researching and consuming OpenAI APIs in a multistage approach that balances cost and performance</li>
-        </ul>
-        <p>
-          Making use of OpenAI&apos;s APIs, I planned a multistep solution for providing contextually aware generative
-          content from disparate materials. Since the user-provided inputs could be in an array of different formats,
-          the solution needed to standardize them, cache them, and provide steps for user intervention in each step of
-          the process. This also included built in feedback loops to improve content over time, reducing the amount of
-          human intervention needed to provide quality results.
-        </p>
-        <p>
-          I love researching and refining ways to tackle new challenges while programming. This project is a great
-          example of some engaging learning opportunities. Designing an AI workflow, exporting different document types
-          using Quarto, and brainstorming interesting ways to filter and suggest data were all enjoyable aspects of
-          developing this app.
-        </p>
-      </DescriptionContainer>
-    ),
-
-    type: 'entrepreneur',
-    technologies: [
-      {
-        name: 'React.js',
-      },
-      {
-        name: 'Typescript',
-      },
-      {
-        name: 'Node/Express',
-      },
-      {
-        name: 'GraphQL',
-      },
-      {
-        name: 'Tailwind',
-      },
-      {
-        name: 'OpenAI',
-      },
-    ],
-    client: 'Still in development',
-    projectLinks: {},
-  },
-  {
-    id: '03',
-    name: 'CDC Foundation Donor Report',
-    description: (
-      <DescriptionContainer>
-        <p>
-          In this yearly engagement spanning over 8 years, I built infographic style microsites to highlight the CDC
-          Foundation&apos;s yearly achievements.
-        </p>
-        <p>
-          In what were previously plain HTML/CSS/JavaScript builds, I led the adoption of a templatized Next.js build
-          for these projects, which drastically reduced the time to completion of each year&apos;s report.
-        </p>
-        <p>My responsibilities included:</p>
-        <ul className="list-disc list-inside">
-          <li>
-            Developing a reusable Next.js template, reducing total project completion time from 120 hours to ~60 hours
-          </li>
-          <li>Translating design specs into reusable componentry</li>
-          <li>
-            Collaborating with the design team to ensure we were making the most of our templatized build without
-            sacrificing creativity
-          </li>
-          <li>Implementing transitions and animations for site imagery and content</li>
-        </ul>
-        <p>
-          Microsites like this are always fun opportunities to play with element and layout transitions, making what
-          could be a static experience something with a bit more character. Moreover, I always love the opportunity to
-          be a part of sharing the accomplishments of the CDC Foundation throughout the years.
-        </p>
-      </DescriptionContainer>
-    ),
-    type: 'non-profit',
-    imagePath: '/cdcf-donor-report.png',
-    technologies: [
-      {
-        name: 'React.js',
-      },
-      {
-        name: 'Typescript',
-      },
-      {
-        name: 'Next.js',
-      },
-      {
-        name: 'Tailwind',
-      },
-    ],
-    client: 'CDC Foundation',
-    projectLinks: {
-      live: 'https://www.cdcfoundation.org/FY2024/index.html',
-    },
-  },
-  {
-    id: '04',
     name: 'Broadcom CAP Editor',
     description: (
       <DescriptionContainer>
@@ -231,7 +73,168 @@ export const projects: Project[] = [
     client: 'Broadcom',
     projectLinks: {
       live: 'https://www.broadcom.com/info/cybersecurity/3d-secure',
+      liveTitle: 'Not public, but you can read more here',
     },
+  },
+  {
+    id: '02',
+    name: 'CDC Foundation Donor Report',
+    description: (
+      <DescriptionContainer>
+        <p>
+          In this yearly engagement spanning over 8 years, I built infographic style microsites to highlight the CDC
+          Foundation&apos;s yearly achievements.
+        </p>
+        <p>
+          In what were previously plain HTML/CSS/JavaScript builds, I led the adoption of a templatized Next.js build
+          for these projects, which drastically reduced the time to completion of each year&apos;s report.
+        </p>
+        <p>My responsibilities included:</p>
+        <ul className="list-disc list-inside">
+          <li>
+            Developing a reusable Next.js template, reducing total project completion time from 120 hours to ~60 hours
+          </li>
+          <li>Translating design specs into reusable componentry</li>
+          <li>
+            Collaborating with the design team to ensure we were making the most of our templatized build without
+            sacrificing creativity
+          </li>
+          <li>Implementing transitions and animations for site imagery and content</li>
+        </ul>
+        <p>
+          Microsites like this are always fun opportunities to play with element and layout transitions, making what
+          could be a static experience something with a bit more character. Moreover, I always love the opportunity to
+          be a part of sharing the accomplishments of the CDC Foundation throughout the years.
+        </p>
+      </DescriptionContainer>
+    ),
+    type: 'non-profit',
+    imagePath: '/cdcf-donor-report.png',
+    technologies: [
+      {
+        name: 'React.js',
+      },
+      {
+        name: 'Typescript',
+      },
+      {
+        name: 'Next.js',
+      },
+      {
+        name: 'Tailwind',
+      },
+    ],
+    client: 'CDC Foundation',
+    projectLinks: {
+      live: 'https://www.cdcfoundation.org/FY2024/index.html',
+      liveTitle: 'Visit the 2024 Donor Report',
+    },
+  },
+  {
+    id: '03',
+    name: 'OM1 Cohort Explorer',
+    description: (
+      <DescriptionContainer>
+        <p>
+          In this engagement, I was embedded in Cohort Explorer scrum team for over a year to help accelerate the build
+          of an application that allows healthcare providers to gain increased insights into patient cohorts.
+        </p>
+        <p>As part of their team, I:</p>
+        <ul className="list-disc list-inside">
+          <li>Managed application state and side effects using Redux and Redux Saga</li>
+          <li>Consumed REST APIs to build complex nested components</li>
+          <li>
+            Worked with designers, product owners, subject matter experts, and the development team to plan and build
+            workable solutions
+          </li>
+          <li>Administered both architectural and visual decisions for the product</li>
+        </ul>
+        <p>
+          These types of product engagements are often my favorites, as I am able to gain some deeper insight into a
+          single system, really consuming myself in the collaborative problem solving aspects of development.
+        </p>
+      </DescriptionContainer>
+    ),
+    type: 'enterprise',
+    imagePath: '/om1.png',
+    technologies: [
+      {
+        name: 'React.js',
+      },
+      {
+        name: 'Typescript',
+      },
+      {
+        name: 'Redux Saga',
+      },
+      {
+        name: 'MUI X',
+      },
+    ],
+    client: 'OM1, Inc.',
+    projectLinks: {
+      live: 'https://www.om1.com/',
+      liveTitle: 'Not public, but you can learn more about OM1 here',
+    },
+  },
+  {
+    id: '04',
+    name: 'Unnamed Marketing Software',
+    description: (
+      <DescriptionContainer>
+        <p>
+          In this project, I led the architecture and development of an AI enabled marketing strategy platform. Backed
+          by the client&apos;s industry expertise, my team designed and developed a full-stack application that enables
+          marketing teams of all skill levels to generate actionable multi-faceted marketing plans, as well as
+          accelerate what were previously tedious marketing tasks.
+        </p>
+        <p>Some of my responsibilities in this project included:</p>
+        <ul className="list-disc list-inside">
+          <li>Working with project managers to build a backlog and prioritize development tasks</li>
+          <li>Working with designers to ensure that the client&apos;s vision was being met and exceeded</li>
+          <li>Working with the client to gather requirements and show progress</li>
+          <li>Architecting a Node/Express backend and React frontend MVP</li>
+          <li>Researching and consuming OpenAI APIs in a multistage approach that balances cost and performance</li>
+        </ul>
+        <p>
+          Making use of OpenAI&apos;s APIs, I planned a multistep solution for providing contextually aware generative
+          content from disparate materials. Since the user-provided inputs could be in an array of different formats,
+          the solution needed to standardize them, cache them, and provide steps for user intervention in each step of
+          the process. This also included built in feedback loops to improve content over time, reducing the amount of
+          human intervention needed to provide quality results.
+        </p>
+        <p>
+          I love researching and refining ways to tackle new challenges while programming. This project is a great
+          example of some engaging learning opportunities. Designing an AI workflow, exporting different document types
+          using Quarto, and brainstorming interesting ways to filter and suggest data were all enjoyable aspects of
+          developing this app.
+        </p>
+      </DescriptionContainer>
+    ),
+
+    type: 'entrepreneur',
+    technologies: [
+      {
+        name: 'React.js',
+      },
+      {
+        name: 'Typescript',
+      },
+      {
+        name: 'Node/Express',
+      },
+      {
+        name: 'GraphQL',
+      },
+      {
+        name: 'Tailwind',
+      },
+      {
+        name: 'OpenAI',
+      },
+    ],
+    client: 'Still in development',
+    projectLinks: {},
   },
   {
     id: '05',
@@ -272,6 +275,7 @@ export const projects: Project[] = [
     client: 'Alloy Digital',
     projectLinks: {
       live: 'https://nucar.com/',
+      liveTitle: 'Visit nucar.com',
     },
   },
   {
@@ -330,6 +334,7 @@ export const projects: Project[] = [
     client: 'Kroger/Lowes',
     projectLinks: {
       live: 'https://krogerchefjunior.com/',
+      liveTitle: 'Visit krogerchefjunior.com',
     },
   },
   {
@@ -396,6 +401,7 @@ export const projects: Project[] = [
     client: 'CDC Foundation',
     projectLinks: {
       live: 'https://www.gtssacademy.org/',
+      liveTitle: 'Visit gtssacademy.org',
     },
   },
 ];

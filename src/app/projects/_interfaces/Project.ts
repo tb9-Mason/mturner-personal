@@ -14,6 +14,8 @@ export interface Project {
 export interface ProjectLinks {
   live?: string;
   github?: string;
+  liveTitle?: string;
+  githubTitle?: string;
 }
 
 export interface ProjectTechnology {

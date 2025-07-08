@@ -39,7 +39,7 @@ export const ProjectCard = ({ project, index }: ProjectCardProps) => {
           <hr className="border w-full my-2" />
           <div>
             <a href={project.projectLinks.live} target="_blank" rel="noreferrer">
-              link
+              {project.projectLinks.liveTitle ? project.projectLinks.liveTitle : 'link'}
             </a>
           </div>
         </>
