@@ -8,7 +8,7 @@ export default function Home() {
       <Heading className="sr-only" tag="h1">
         Mason Turner - Atlanta Software Developer
       </Heading>
-      <div className="mx-auto">
+      <div className="mx-auto w-full xs:w-auto">
         <NameTag />
       </div>
       <section className="flex flex-col gap-4">

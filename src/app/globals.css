@@ -13,11 +13,15 @@ html.dark {
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
+  /* Colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  /* Fonts */
   --font-sans: var(--font-montserrat);
   --font-mono: var(--font-geist-mono);
   --font-plain: Arial, Helvetica, sans-serif;
+  /* Breakpoints */
+  --breakpoint-xs: 24rem;
 }
 
 @utility shadow-dark {
